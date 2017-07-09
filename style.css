@@ -1,0 +1,367 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*0.common*/
+body {
+    font-family: 'PT Sans Caption', sans-serif;
+	color: #222;
+}
+.inner {
+	max-width: 980px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+.inner::after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+    content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+/*1.header*/
+#header {
+    background: #eddb7a;
+	border: 1px solid #95989a;
+}
+.logo {
+    float: left;
+	margin-left: 20px;
+}
+.nav {
+    float: right;
+    padding-top: 6px;
+}
+.nav li {
+    float: left;
+	width: 158px;
+	height: 35px;
+    margin-right: 40px;
+	text-align: center;
+}
+.nav li:last-child {
+    margin-right: 0;
+	border-radius: 4px;
+	background: #d83737;
+	text-transform: uppercase;
+}
+.nav li:last-child:hover {
+	background: #962828;
+}
+#openMod.active {
+	background: #f53939;
+}
+.nav li a {
+	font-size: 20px;
+	line-height: 37px;
+	color: #222;
+    text-decoration: none;
+}
+.nav li a:hover {
+    text-decoration: underline;
+}
+.nav li:last-child a {
+	color: #fff;
+	text-decoration: none;
+}
+/*modal*/
+#myModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 30.7%;
+	top: 20.5%;
+	width: 527px;
+	height: 436px;
+	padding: 41px 36px 40px 37px;
+	overflow: auto;
+	border-radius: 4px;
+	background: #fff;
+}
+.modal-content h3 {
+	margin-bottom: 33px;
+	font-size: 23px;
+	letter-spacing: -0.4px;
+}
+.modal-content label {
+	font-size: 16px;
+	line-height: 35px;
+}
+.modal-content label:last-child {
+	font-size: 11px;
+	color: #a4a7a8;
+	cursor: pointer;
+}
+.modal-content label:last-child span {
+	text-decoration: underline;
+}
+.modal-content input {
+	width: 510px;
+	height: 40px;
+	padding-left: 15px;
+	margin-bottom: 32px;
+	border: 1px solid #eddb7a;
+}
+.modal-content input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+}
+.modal-content .item {
+	display: inline-block;
+}
+.modal-content .btn {
+	margin-top: 7px;
+	margin-right: 40px;
+	width: 243px;
+	height: 42px;
+	font-size: 21px;
+	background: #d83737;
+	border-radius: 5px;
+	color: #fff;
+	text-transform: uppercase;
+}
+.modal-content .btn:hover {
+	background: #962828;
+}
+.close {
+	float: right;
+	position: relative;
+	width: 29px;
+	height: 29px;
+	cursor: pointer;
+}
+.close:before, .close:after {
+	position: absolute;
+	left: 13px;
+	content: ' ';
+	height: 29px;
+	width: 2px;
+	background-color: #ffec83;
+}
+.close:before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.close:after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.close:hover:before, .close:hover:after {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	background: #222;
+}
+/*2.project*/
+#project {
+	background: url('img/bg-promo.jpg') no-repeat center;
+	background-size: cover;
+	text-align: center;
+	border: 1px solid #cacbcc;
+}
+#project .inner {
+	padding-top: 270px;
+}
+#project h1 {
+	font-size: 72px;
+	color: #222222;
+	margin-bottom: 90px;
+}
+#project p {
+	padding-left: 15px;
+	font-size: 21px;
+	margin-bottom: 308px;
+}
+/*3.promo*/
+#promo .inner {
+	padding-top: 80px;
+	text-align: center;
+}
+#promo h2 {
+	padding-left: 20px;
+	font-size: 40px;
+	margin-bottom: 22px;
+	letter-spacing: 1.2px
+}
+#promo p {
+	padding-left: 25px;
+	font-size: 21px;
+	margin-bottom: 85px;
+}
+.pics {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.pics li a {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: #222;
+	font-size: 21px;
+	line-height: 21px;
+}
+.pic {
+	width: 265px;
+	height: 265px;
+	margin: 0 auto 41px auto;
+	border-radius: 50%;
+	border: 1px solid #95989a;
+}
+.pic:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(0.95);
+}
+.pic_1 {
+	background: url('img/img1.png') center no-repeat;
+}
+.pic_2 {
+	background: url('img/img2.png') center no-repeat;
+}
+.pic_3 {
+	background: url('img/img3.png') center no-repeat;
+}
+/*media*/
+@media screen and (max-width: 910px) {
+	.pics {
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+	}
+	.pics li a {
+		margin-bottom: 15px;
+		font-size: 15px;
+		line-height: 15px;
+	}
+	.pic {
+		margin-bottom: 10px;
+	}
+	#promo h2 {
+		font-size: 28px;
+	}
+	#promo p {
+		margin-bottom: 40px;
+	}
+	.nav li {
+		margin-right: 0px;
+		width: 100px;
+	}
+	#myModal {
+		width: 250px;
+		padding: 10px;
+	}
+	.modal-content h3 {
+		margin-bottom: 25px;
+		font-size: 16px;
+	}
+	.modal-content label {
+		font-size: 14px;
+		line-height: 35px;
+	}
+	.modal-content label:last-child {
+		font-size: 9px;
+	}
+	.modal-content input {
+		width: 100%;
+		height: 40px;
+		padding-left: 5px;
+		margin-bottom: 25px;
+	}
+	.modal-content .btn {
+		margin-top: 7px;
+		margin-right: 0px;
+		width: 45px;
+		height: 42px;
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.logo {
+		display: none;
+	}
+	.nav {
+		float: left;
+	}
+	.nav li a {
+		font-size: 15px;
+		line-height: 37px;
+	}
+	.nav li {
+		width: 75px;
+	}
+	#project .inner {
+		padding-top: 150px;
+	}
+	#project h1 {
+		font-size: 28px;
+	}
+	#project p {
+		padding-left: 0px;
+		font-size: 15px;
+		margin-bottom: 150px;
+	}
+	#myModal {
+		left: 10%;
+		top: 10%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
